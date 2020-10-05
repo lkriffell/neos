@@ -1,6 +1,6 @@
 require_relative 'near_earth_objects'
 
-class NEO
+class NEOService
   attr_reader :date
   def initialize()
     @date = get_date
@@ -58,7 +58,7 @@ class NEO
   end
 end
 
-neo = NEO.new
+neo = NEOService.new
 puts "______________________________________________________________________________"
 puts "On #{DateTime.parse(neo.date).strftime("%A %b %d, %Y")}, there were #{neo.total_number_of_astroids} objects that almost collided with the earth."
 puts "The largest of these was #{neo.largest_astroid} ft. in diameter."
